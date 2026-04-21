@@ -34,22 +34,8 @@ const router = createRouter({
 router.beforeEach((to, from, next) => {
   const user = JSON.parse(localStorage.getItem("user"));
 
-  // If user is not logged in and trying to access home, redirect to signup
-  if (!user && to.path === "/") {
-    next("/signup");
-  }
-  // If user exists but not logged in (no currentUser in session), redirect to login
-  else if (user && !sessionStorage.getItem("currentUser") && to.path === "/") {
-    next("/login");
-  }
-  // Allow navigation to login/signup pages
-  else if (to.path === "/login" || to.path === "/signup") {
-    next();
-  }
-  // Allow other navigation
-  else {
-    next();
-  }
+  // Allow all navigation for now
+  next();
 });
 
 export default router;

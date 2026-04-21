@@ -116,7 +116,10 @@
           @click="handleGoogleSignup"
           class="w-full border py-2 rounded-md flex items-center justify-center gap-2 hover:bg-gray-50"
         >
-          <span class="text-lg font-bold">G</span>
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlh1Kyfo9hJplmkiOKcHD9XcpUvlJaZrh5ZA&s"
+            class="w-5 h-5"
+          />
           Sign Up with Google
         </button>
 
