@@ -2,7 +2,7 @@
   <header class="w-full">
     <!-- Top Banner -->
     <div
-      class="bg-brand m-2 text-white text-xs md:text-sm text-center py-2 px-3 rounded-lg"
+      class="bg-brand px-4 text-white text-xs md:text-sm text-center py-2 m-2 rounded-lg"
     >
       Free Courses ✨ Sale Ends Soon, Get It Now →
     </div>
@@ -10,7 +10,7 @@
     <!-- Navbar -->
     <nav class="bg-white border-b">
       <div
-        class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between"
+        class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between"
       >
         <!-- Left: Logo -->
         <img

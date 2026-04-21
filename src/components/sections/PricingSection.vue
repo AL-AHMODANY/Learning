@@ -1,7 +1,6 @@
 <template>
   <section class="bg-white py-16 px-4">
-    <div class="max-w-5xl mx-auto">
-
+    <div class="max-w-6xl mx-auto">
       <!-- Header -->
       <div class="text-center mb-12">
         <h2 class="text-2xl md:text-3xl font-semibold text-gray-900 mb-3">
@@ -14,16 +13,13 @@
 
       <!-- Cards -->
       <div class="grid gap-6 md:grid-cols-2">
-
         <div
           v-for="(plan, index) in plans"
           :key="index"
           class="border border-gray-200 rounded-2xl p-8 flex flex-col justify-between min-h-[520px]"
         >
-
           <!-- Top -->
           <div>
-
             <!-- Title -->
             <h3 class="text-lg font-semibold text-gray-900 mb-6">
               {{ plan.name }}
@@ -39,28 +35,24 @@
 
             <!-- Features -->
             <ul class="space-y-4 text-sm text-gray-600">
-              <li v-for="(f, i) in plan.features" :key="i">
-                ✔ {{ f }}
-              </li>
+              <li v-for="(f, i) in plan.features" :key="i">✔ {{ f }}</li>
             </ul>
-
           </div>
 
           <!-- Button -->
           <button
             class="mt-10 w-full py-3 rounded-lg font-medium transition"
-            :class="plan.popular
-              ? 'bg-brand text-white hover:bg-brand-dark'
-              : 'bg-gray-100 text-gray-900 hover:bg-gray-200'"
+            :class="
+              plan.popular
+                ? 'bg-brand text-white hover:bg-brand-dark'
+                : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+            "
             @click="selectPlan(plan)"
           >
             Get Started
           </button>
-
         </div>
-
       </div>
-
     </div>
   </section>
 </template>

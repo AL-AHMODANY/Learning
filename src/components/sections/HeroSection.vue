@@ -1,6 +1,6 @@
 <template>
   <section class="bg-white text-black pt-20 pb-12 px-4">
-    <div class="max-w-5xl mx-auto text-center">
+    <div class="max-w-6xl mx-auto text-center">
       <!-- Badge -->
       <div
         class="inline-flex items-center gap-3 bg-slate-50 text-gray-900 px-5 py-3 rounded-xl mb-6 shadow-sm"

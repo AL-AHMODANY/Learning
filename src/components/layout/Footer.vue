@@ -1,7 +1,7 @@
 <template>
   <footer class="bg-gray-100 border-t mt-16">
     <div
-      class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-10"
+      class="max-w-6xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-4 gap-10"
     >
       <!-- Left Section -->
       <div>
