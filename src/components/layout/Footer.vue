@@ -15,24 +15,15 @@
         <!-- Contact -->
         <ul class="space-y-3 text-gray-600 text-sm">
           <li class="flex items-center gap-2">
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5pRMp1ssQ1zrd0Ab0nG2aquswXXTLnV5u2Q&s"
-              class="w-4 h-4"
-            />
+            <span class="text-lg">📧</span>
             rahmanhamad36@gmail.com
           </li>
           <li class="flex items-center gap-2">
-            <img
-              src="https://static.vecteezy.com/system/resources/previews/003/720/476/non_2x/phone-icon-telephone-icon-symbol-for-app-and-messenger-vector.jpg"
-              class="w-4 h-4"
-            />
+            <span class="text-lg">📞</span>
             +812 911 7778
           </li>
           <li class="flex items-center gap-2">
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzvGspl1kRjgWZ6Od49h5JEkdwe79MLT8jkQ&s"
-              class="w-4 h-4"
-            />
+            <span class="text-lg">📍</span>
             Somewhere in the World
           </li>
         </ul>
@@ -67,32 +58,23 @@
         <div class="flex gap-3">
           <a
             href="#"
-            class="p-2 bg-white border rounded-md hover:bg-orange-500 transition"
+            class="p-2 bg-white border rounded-md hover:bg-orange-500 transition text-lg"
           >
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXaOeEoicyCBt-lHs6f-R3aS5mLmdlqs8bLw&s"
-              class="w-5 h-5"
-            />
+            📘
           </a>
 
           <a
             href="#"
-            class="p-2 bg-white border rounded-md hover:bg-orange-500 transition"
+            class="p-2 bg-white border rounded-md hover:bg-orange-500 transition text-lg"
           >
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZlk5H3BOCyxp-OK2aCXgyDeLwSljNo33Lgw&s"
-              class="w-5 h-5"
-            />
+            🐦
           </a>
 
           <a
             href="#"
-            class="p-2 bg-white border rounded-md hover:bg-orange-500 transition"
+            class="p-2 bg-white border rounded-md hover:bg-orange-500 transition text-lg"
           >
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/CIS-A2K_Instagram_Icon_%28Black%29.svg/500px-CIS-A2K_Instagram_Icon_%28Black%29.svg.png"
-              class="w-5 h-5"
-            />
+            📷
           </a>
         </div>
       </div>
