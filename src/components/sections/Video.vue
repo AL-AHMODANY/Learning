@@ -4,7 +4,7 @@
       
       <!-- Background Image -->
       <img
-        src="../../assets/images/a man and a girl.png"
+        src="../../assets/images/a-man-and-a-girl.png"
         alt="Video thumbnail"
         class="w-full h-[300px] sm:h-[300px] md:h-[500px] lg:h-[600px] object-cover"
       />
