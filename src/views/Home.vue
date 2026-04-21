@@ -1,11 +1,11 @@
 <template>
   <div>
     <HeroSection />
-    <VideoSection />
+    <Video />
     <BenefitCard />
-    <TestimonialsSection />
+    <TestimonialSection />
     <div id="courses">
-      <CoursesSection />
+      <CourseSection />
     </div>
     <div id="pricing">
       <PricingSection />
@@ -21,11 +21,10 @@
 
 <script setup>
 import HeroSection from "../components/sections/HeroSection.vue";
-import VideoSection from "../components/sections/Video.vue";
-import BenefitCard from "../components/sections/BenefitCard.vue";
-import CoursesSection from "../components/sections/CourseSection.vue";
-import Accordion from "../components/sections/Accordion.vue";
-import TestimonialsSection from "../components/sections/TestimonialSection.vue";
-import PricingSection from "../components/sections/PricingSection.vue";
 import Video from "../components/sections/Video.vue";
+import BenefitCard from "../components/sections/BenefitCard.vue";
+import CourseSection from "../components/sections/CourseSection.vue";
+import Accordion from "../components/sections/Accordion.vue";
+import TestimonialSection from "../components/sections/TestimonialSection.vue";
+import PricingSection from "../components/sections/PricingSection.vue";
 </script>

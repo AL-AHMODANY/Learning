@@ -6,12 +6,13 @@ import Home from "../views/Home.vue";
 const routes = [
   {
     path: "/",
-    name: "Home",
-    component: Home,
+    name: "SignUp",
+    component: SignUp,
   },
   {
     path: "/home",
-    redirect: "/",
+    name: "Home",
+    component: Home,
   },
   {
     path: "/login",
@@ -20,7 +21,7 @@ const routes = [
   },
   {
     path: "/signup",
-    name: "SignUp",
+    name: "SignUpPage",
     component: SignUp,
   },
 ];
@@ -34,8 +35,12 @@ const router = createRouter({
 router.beforeEach((to, from, next) => {
   const user = JSON.parse(localStorage.getItem("user"));
 
-  // Allow all navigation for now
-  next();
+  // If trying to access home without being logged in, redirect to signup
+  if (to.path === "/home" && !user) {
+    next("/signup");
+  } else {
+    next();
+  }
 });
 
 export default router;

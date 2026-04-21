@@ -55,8 +55,10 @@
 import eyeOpen from "../assets/images/eye open.jpg";
 import eyeClosed from "../assets/images/eye closed.jpg";
 import { ref } from "vue";
+import { useRouter } from "vue-router";
 import Swal from "sweetalert2";
 
+const router = useRouter();
 const email = ref("");
 const password = ref("");
 const showPassword = ref(false);
@@ -86,6 +88,7 @@ const handleLogin = () => {
   ) {
     // Save current user session
     sessionStorage.setItem("currentUser", JSON.stringify(savedUser));
+    window.dispatchEvent(new Event("userLoggedIn"));
 
     Swal.fire({
       title: "Welcome back 🎉",
@@ -93,7 +96,7 @@ const handleLogin = () => {
       icon: "success",
     }).then(() => {
       // Redirect to home page after successful login
-      window.location.href = "/";
+      router.push("/home");
     });
   } else {
     Swal.fire("Login Failed", "Incorrect email or password", "error");

@@ -237,14 +237,16 @@ const handleSubmit = () => {
     };
 
     localStorage.setItem("user", JSON.stringify(user));
+    sessionStorage.setItem("currentUser", JSON.stringify(user));
+    window.dispatchEvent(new Event("userLoggedIn"));
 
     Swal.fire({
       icon: "success",
       title: "Success 🎉",
-      text: "Account created successfully! You can now login.",
+      text: "Account created successfully! Welcome!",
     }).then(() => {
-      // Redirect to login page after successful signup
-      window.location.href = "/login";
+      // Redirect to home page after successful signup
+      window.location.href = "/home";
     });
 
     form.name = "";

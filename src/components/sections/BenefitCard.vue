@@ -1,26 +1,27 @@
 <template>
   <section class="bg-white py-16 px-4">
     <div class="max-w-6xl mx-auto">
-
       <!-- Header -->
       <div class="flex items-start justify-between mb-10">
         <div>
           <h2 class="text-2xl md:text-3xl font-semibold text-gray-900 mb-2">
             Benefits
           </h2>
-          <p class="text-black-500 max-w-xl text-sm md:text-base">
-            Lorem ipsum dolor sit amet consectetur. Tempus tincidunt etiam eget elit id imperdiet et.
+          <p class="text-gray-500 max-w-xl text-sm md:text-base">
+            Lorem ipsum dolor sit amet consectetur. Tempus tincidunt etiam eget
+            elit id imperdiet et.
           </p>
         </div>
 
-        <button class="hidden md:block text-sm text-gray-700 hover:text-orange-500">
+        <button
+          class="hidden md:block text-sm text-gray-700 hover:text-orange-500"
+        >
           View All
         </button>
       </div>
 
       <!-- Cards Grid -->
       <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-
         <div
           v-for="(item, index) in benefits"
           :key="index"
@@ -42,11 +43,8 @@
           </p>
 
           <!-- Arrow -->
-          <div class="absolute bottom-4 right-4 text-orange-500 text-lg">
-            ↗
-          </div>
+          <div class="absolute bottom-4 right-4 text-orange-500 text-lg">↗</div>
         </div>
-
       </div>
 
       <!-- Mobile View All -->
@@ -55,7 +53,6 @@
           View All
         </button>
       </div>
-
     </div>
   </section>
 </template>

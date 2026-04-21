@@ -23,7 +23,7 @@
         <ul class="hidden lg:flex items-center gap-6 text-sm text-gray-800">
           <li>
             <router-link
-              to="/"
+              to="/home"
               class="bg-gray-100 px-4 py-2 rounded-md font-medium"
             >
               Home
@@ -155,7 +155,7 @@
             </template>
             <template v-else>
               <router-link
-                to="/signup"
+                to="/"
                 class="hover:text-gray-900 flex-1 text-center"
               >
                 Sign Up
@@ -175,20 +175,29 @@
 </template>
 
 <script setup>
-import { ref, computed } from "vue";
+import { ref, computed, onMounted } from "vue";
 import { useRouter } from "vue-router";
 
 const router = useRouter();
 const isOpen = ref(false);
+const currentUser = ref(null);
 
 const toggleMenu = () => {
   isOpen.value = !isOpen.value;
 };
 
-// Get current user from sessionStorage
-const currentUser = computed(() => {
+onMounted(() => {
   const user = sessionStorage.getItem("currentUser");
-  return user ? JSON.parse(user) : null;
+  currentUser.value = user ? JSON.parse(user) : null;
+});
+
+window.addEventListener("userLoggedIn", () => {
+  const user = sessionStorage.getItem("currentUser");
+  currentUser.value = user ? JSON.parse(user) : null;
+});
+
+window.addEventListener("userLoggedOut", () => {
+  currentUser.value = null;
 });
 
 // Get user initials
@@ -204,6 +213,7 @@ const initials = computed(() => {
 // Handle logout
 const handleLogout = () => {
   sessionStorage.removeItem("currentUser");
+  window.dispatchEvent(new Event("userLoggedOut"));
   router.push("/signup");
 };
 </script>
